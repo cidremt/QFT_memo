@@ -1,0 +1,17 @@
+
+{
+	"name": "test",
+	"image": "cidremt/test",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workdir,type=bind",
+	"workspaceFolder": "/workdir",
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"nvarner.typst-lsp",
+				"mgt19937.typst-preview",
+				"mhutchie.git-graph"
+			]
+		}
+	}
+}
